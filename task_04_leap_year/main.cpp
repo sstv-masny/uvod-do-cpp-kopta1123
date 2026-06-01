@@ -5,8 +5,7 @@ int main() {
     std::cin.tie(nullptr);
     long long y;
     if (!(std::cin >> y)) return 0;
-   int rok;
-    if (rok/400==0&& rok/4==0)
+    if (y%400==0&& y%4==0 && y%100 !=0)
         { cout<<"YES">> ;}
         else{ cout<<"NO">> ;}
         return 0;
