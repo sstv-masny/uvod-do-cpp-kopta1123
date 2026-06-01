@@ -6,9 +6,9 @@ int main() {
     long long n;
    if (!(std::cin >> n)) return 0;
     if (n % 2 == 0) {
-        std::cout << "even";
+        cout << "even";
     } else {
-        std::cout << "odd";
+        cout << "odd";
     }
     return 0;
 }
