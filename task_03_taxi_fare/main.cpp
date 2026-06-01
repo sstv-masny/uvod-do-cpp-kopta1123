@@ -7,6 +7,13 @@ int main() {
     std::cin.tie(nullptr);
     long long k;
     if (!(std::cin >> k)) return 0;
-    // TODO: compute the fare as specified and print with two decimals
+       if (k <= 2) {
+        cena = 4;
+    } else {
+        cena = 4 + (k - 2) * 1.5;
+    }
+
+    cout << cena;
+
     return 0;
 }
