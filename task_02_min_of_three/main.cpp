@@ -15,7 +15,7 @@ int main() {
     }
 
     if (c <= a && c <= b) {
-        std::cout << c;
+        cout << c;
     }
 
     return 0;
