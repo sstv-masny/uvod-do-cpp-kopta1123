@@ -5,6 +5,18 @@ int main() {
     std::cin.tie(nullptr);
     long long a,b,c;
     if (!(std::cin >> a >> b >> c)) return 0;
-    // TODO: print the minimum of a, b, c
+    
+    if (a <= b && a <= c) {
+        std::cout << a;
+    }
+
+    if (b <= a && b <= c) {
+        std::cout << b;
+    }
+
+    if (c <= a && c <= b) {
+        std::cout << c;
+    }
+
     return 0;
 }
