@@ -5,6 +5,10 @@ int main() {
     std::cin.tie(nullptr);
     long long n;
     if (!(std::cin >> n)) return 0;
-    // TODO: print "even" or "odd"
+{    cout << "even";
+}
+    else{
+ std::cout << "odd";
+    }
     return 0;
 }
