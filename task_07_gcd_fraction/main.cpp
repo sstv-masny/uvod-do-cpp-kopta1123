@@ -1,16 +1,34 @@
-
-#include <cstdlib>
 #include <iostream>
-long long gcdll(long long a, long long b) {
-    // TODO: Euclid's algorithm (handle negatives)
-    return 1;
-}
+
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
     long long p, q;
-    if (!(std::cin >> p >> q))
-        return 0;
-    // TODO: reduce, ensure q'>0, and print p' q'
+    std::cin >> p >> q;
+
+    long long a = p;
+    long long b = q;
+
+    if (a < 0)
+        a = -a;
+    if (b < 0)
+        b = -b;
+
+    while (a != b) {
+        if (a > b) {
+            a = a - b;
+        } else {
+            b = b - a;
+        }
+    }
+
+    p = p / a;
+    q = q / a;
+
+    if (q < 0) {
+        p = -p;
+        q = -q;
+    }
+
+    std::cout << p << " " << q;
+
     return 0;
 }
