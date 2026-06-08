@@ -1,10 +1,17 @@
-
 #include <iostream>
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
     unsigned long long n;
-    if (!(std::cin >> n)) return 0;
-    // TODO: reverse using % and /, not strings
+    std::cin >> n;
+
+    unsigned long long r = 0;
+
+    while (n > 0) {
+        r = r * 10;
+        r = r + n % 10;
+        n = n / 10;
+    }
+
+    std::cout << r;
+
     return 0;
 }

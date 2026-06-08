@@ -1,12 +1,32 @@
-
+#include <cctype>
 #include <iostream>
 #include <string>
-#include <cctype>
+
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
     std::string s;
-    if (!std::getline(std::cin, s)) return 0;
-    // TODO: normalize and check palindrome; print YES/NO
+    std::getline(std::cin, s);
+
+    std::string t = "";
+
+    for (char ch : s) {
+        if (isalnum(ch)) {
+            t += tolower(ch);
+        }
+    }
+
+    bool ok = true;
+
+    for (int i = 0; i < t.length() / 2; i++) {
+        if (t[i] != t[t.length() - 1 - i]) {
+            ok = false;
+        }
+    }
+
+    if (ok) {
+        std::cout << "YES";
+    } else {
+        std::cout << "NO";
+    }
+
     return 0;
 }
