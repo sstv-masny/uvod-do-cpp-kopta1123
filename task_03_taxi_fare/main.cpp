@@ -1,12 +1,19 @@
-
-#include <iostream>
-#include <iomanip>
 #include <cmath>
+#include <iomanip>
+#include <iostream>
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
     long long k;
-    if (!(std::cin >> k)) return 0;
-    // TODO: compute the fare as specified and print with two decimals
+    double cena;
+
+    std::cin >> k;
+
+    if (k <= 2) {
+        cena = 4;
+    } else {
+        cena = 4 + (k - 2) * 1.5;
+    }
+
+    std::cout << std::fixed << std::setprecision(2) << cena;
+
     return 0;
 }
